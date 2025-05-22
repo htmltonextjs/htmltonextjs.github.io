@@ -19,11 +19,22 @@ export default function NotFound404() {
     if (pathname.toLowerCase() == '/') {
         redirect('/legacy/index.html')
     }
+    // project
     if (pathname.toLowerCase().startsWith('/mpi')) {
         redirect('/legacy/MPI/index.html')
     }
-    
-
+    if (pathname.toLowerCase().startsWith('/vista')) {
+        redirect('/legacy/Vista/index.html')
+    }
+    if (pathname.toLowerCase().startsWith('/drivelm')) {
+        redirect('/legacy/DriveLM/index.html')
+    }
+    if (pathname.toLowerCase().startsWith('/nexus')) {
+        redirect('/legacy/Nexus/index.html')
+    }
+    if (pathname.toLowerCase().startsWith('/robodual')) {
+        redirect('/legacy/RoboDual/index.html')
+    }
 
 
     return (
