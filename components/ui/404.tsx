@@ -16,68 +16,89 @@ export default function NotFound404() {
 
 
     const pathname = usePathname()
-    if (pathname.toLowerCase() == '/') {
+    if (
+        pathname.toLowerCase() == '/'
+    ) {
         redirect('/legacy/index.html')
     }
     if (
         pathname.toLowerCase() == '/team' ||
-        pathname.toLowerCase() == '/team/') {
+        pathname.toLowerCase() == '/team/'
+    ) {
         redirect('/legacy/team/index.html')
     }
     if (
         pathname.toLowerCase() == '/recruit' ||
-        pathname.toLowerCase() == '/recruit/') {
+        pathname.toLowerCase() == '/recruit/'
+    ) {
         redirect('/legacy/recruit/index.html')
     }
     if (
         pathname.toLowerCase() == '/dataset' || 
         pathname.toLowerCase() == '/dataset/' ||
         pathname.toLowerCase() == '/datasets' ||
-        pathname.toLowerCase() == '/datasets/') {
+        pathname.toLowerCase() == '/datasets/'
+    ) {
         redirect('/legacy/datasets/index.html')
     }
     if (
         pathname.toLowerCase() == '/publication' || 
         pathname.toLowerCase() == '/publication/' ||
         pathname.toLowerCase() == '/publications' ||
-        pathname.toLowerCase() == '/publications/') {
+        pathname.toLowerCase() == '/publications/'
+    ) {
         redirect('/legacy/publications/index.html')
     }
     if (
         pathname.toLowerCase() == '/event' || 
         pathname.toLowerCase() == '/event/' ||
         pathname.toLowerCase() == '/events' ||
-        pathname.toLowerCase() == '/events/') {
+        pathname.toLowerCase() == '/events/'
+    ) {
         redirect('/legacy/events/index.html')
     }
     // project
-    if (pathname.toLowerCase().startsWith('/mpi')) {
+    if (
+        pathname.toLowerCase().startsWith('/mpi')
+    ) {
         redirect('/legacy/MPI/index.html')
     }
-    if (pathname.toLowerCase().startsWith('/vista')) {
+    if (
+        pathname.toLowerCase().startsWith('/vista')
+    ) {
         redirect('/legacy/Vista/index.html')
     }
-    if (pathname.toLowerCase().startsWith('/drivelm')) {
+    if (
+        pathname.toLowerCase().startsWith('/drivelm')
+    ) {
         redirect('/legacy/DriveLM/index.html')
     }
-    if (pathname.toLowerCase().startsWith('/nexus')) {
+    if (
+        pathname.toLowerCase().startsWith('/nexus')
+    ) {
         redirect('/legacy/Nexus/index.html')
     }
-    if (pathname.toLowerCase().startsWith('/robodual')) {
+    if (
+        pathname.toLowerCase().startsWith('/robodual')
+    ) {
         redirect('/legacy/RoboDual/index.html')
     }
-    if (pathname.toLowerCase().startsWith('/elm')) {
+    if (
+        pathname.toLowerCase().startsWith('/elm')
+    ) {
         redirect('https://opendrivelab.github.io/elm.github.io/')
     }
     // challenge
     if (
         pathname.toLowerCase().startsWith('/AD23Challenge') || 
-        pathname.toLowerCase() == '/challenge2023/') {
+        pathname.toLowerCase() == '/challenge2023/'
+    ) {
         redirect('/legacy/challenge2023/index.html')
     }
     if (
         pathname.toLowerCase().startsWith('/cvpr2024/challenge') || 
-        pathname.toLowerCase() == '/challenge2024/') {
+        pathname.toLowerCase() == '/challenge2024/'
+    ) {
         redirect('/legacy/challenge2024/index.html')
     }
     if (
@@ -90,29 +111,38 @@ export default function NotFound404() {
     if (
         pathname.toLowerCase().startsWith('/event/iclr23_ADworkshop') || 
         pathname.toLowerCase().startsWith('/sr4ad/iclr23') || 
-        pathname.toLowerCase() == '/iclr2023/workshop/') {
+        pathname.toLowerCase() == '/iclr2023/workshop/'
+    ) {
         redirect('/legacy/iclr2023/workshop/index.html')
     }
     if (
         pathname.toLowerCase().startsWith('/event/cvpr23_ADworkshop') ||
         pathname.toLowerCase() == '/e2ead/cvpr23' ||
         pathname.toLowerCase() == '/e2ead/cvpr23/' || 
-        pathname.toLowerCase() == '/cvpr2023/workshop/') {
+        pathname.toLowerCase() == '/cvpr2023/workshop/'
+    ) {
         redirect('/legacy/cvpr2023/workshop/index.html')
     }
-    if (pathname.toLowerCase().startsWith('/valse2024')) {
+    if (
+        pathname.toLowerCase().startsWith('/valse2024')
+    ) {
         redirect('/legacy/valse2024/workshop/index.html')
     }
     // misc.
-    if (pathname.toLowerCase().startsWith('/lihongyang')) {
+    if (
+        pathname.toLowerCase().startsWith('/lihongyang')
+    ) {
         redirect('https://lihongyang.info/')
     }
     if (
         pathname.toLowerCase().startsWith('/e2ead/cvpr23_CN') || 
-        pathname.toLowerCase() == '/event2023/') {
+        pathname.toLowerCase() == '/event2023/'
+    ) {
         redirect('/legacy/event2023/index.html')
     }
-        if (pathname.toLowerCase() == '/event2024/') {
+    if (
+        pathname.toLowerCase() == '/event2024/'
+    ) {
         redirect('https://starleague.ai/event2024/')
     }
 
