@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     icons: {
         icon: [
             {
-                url: "/logo/HKU_MMLAB.png",
-                href: "/logo/HKU_MMLAB.png",
+                url: "/logo/OpenDriveLab/D_small.png",
+                href: "/logo/OpenDriveLab/D_small.png",
             },
         ],
     },
@@ -69,7 +69,7 @@ export default function RootLayout({
                         <Button asChild className="bg-background text-foreground hover:bg-white group">
                             <Link href="/" className="select-none">
                                 <Image
-                                    src="/logo/HKU_MMLAB.png"
+                                    src="/logo/OpenDriveLab/D.png"
                                     alt="OpenDriveLab"
                                     width={24}
                                     height={24}
@@ -126,7 +126,7 @@ export default function RootLayout({
 
 
             </body>
-            <GoogleAnalytics gaId="G-HGTJE0RYX9" />
+            <GoogleAnalytics gaId="G-L7VEDHS6G8" />
         </html>
     );
 }
