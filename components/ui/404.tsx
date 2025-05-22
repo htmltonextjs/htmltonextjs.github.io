@@ -19,6 +19,37 @@ export default function NotFound404() {
     if (pathname.toLowerCase() == '/') {
         redirect('/legacy/index.html')
     }
+    if (
+        pathname.toLowerCase() == '/team' ||
+        pathname.toLowerCase() == '/team/') {
+        redirect('/legacy/team/index.html')
+    }
+    if (
+        pathname.toLowerCase() == '/recruit' ||
+        pathname.toLowerCase() == '/recruit/') {
+        redirect('/legacy/recruit/index.html')
+    }
+    if (
+        pathname.toLowerCase() == '/dataset' || 
+        pathname.toLowerCase() == '/dataset/' ||
+        pathname.toLowerCase() == '/datasets' ||
+        pathname.toLowerCase() == '/datasets/') {
+        redirect('/legacy/datasets/index.html')
+    }
+    if (
+        pathname.toLowerCase() == '/publication' || 
+        pathname.toLowerCase() == '/publication/' ||
+        pathname.toLowerCase() == '/publications' ||
+        pathname.toLowerCase() == '/publications/') {
+        redirect('/legacy/publications/index.html')
+    }
+    if (
+        pathname.toLowerCase() == '/event' || 
+        pathname.toLowerCase() == '/event/' ||
+        pathname.toLowerCase() == '/events' ||
+        pathname.toLowerCase() == '/events/') {
+        redirect('/legacy/events/index.html')
+    }
     // project
     if (pathname.toLowerCase().startsWith('/mpi')) {
         redirect('/legacy/MPI/index.html')
@@ -35,7 +66,13 @@ export default function NotFound404() {
     if (pathname.toLowerCase().startsWith('/robodual')) {
         redirect('/legacy/RoboDual/index.html')
     }
-
+    if (pathname.toLowerCase().startsWith('/elm')) {
+        redirect('https://opendrivelab.github.io/elm.github.io/')
+    }
+    // misc.
+    if (pathname.toLowerCase().startsWith('/lihongyang')) {
+        redirect('https://lihongyang.info/')
+    }
 
     return (
         <main>
