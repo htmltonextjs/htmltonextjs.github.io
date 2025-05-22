@@ -59,6 +59,23 @@ export default function NotFound404() {
     }
     // project
     if (
+        pathname.toLowerCase().startsWith('/blog/agibot-world-colosseo') || 
+        pathname.toLowerCase() == '/blog/agibot-world/'
+    ) {
+        redirect('/legacy/blog/agibot-world/index.html')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/agibotworld_paper.pdf') || 
+        pathname.toLowerCase().startsWith('/assets/file/AgiBot_World_Colosseo.pdf')
+    ) {
+        redirect('https://arxiv.org/pdf/2503.06669')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/DriveAGI')
+    ) {
+        redirect('https://github.com/OpenDriveLab/DriveAGI')
+    }
+    if (
         pathname.toLowerCase().startsWith('/mpi')
     ) {
         redirect('/legacy/MPI/index.html')
@@ -145,6 +162,28 @@ export default function NotFound404() {
     ) {
         redirect('https://starleague.ai/event2024/')
     }
+    if (
+        pathname.toLowerCase() == '/e2ead/UniAD_plenary_talk_slides.pdf'
+    ) {
+        redirect('https://opendrivelab.github.io/UniAD_plenary_talk_slides.pdf')
+    }
+    if (
+        pathname.toLowerCase() == '/Dataset_Survey_Chinese_V2.pdf'
+    ) {
+        redirect('http://engine.scichina.com/doi/10.1360/SSI-2023-0313')
+    }    
+    if (
+        pathname.toLowerCase() == '/ICCV23_towards_general_ai_in_ad.pdf'
+    ) {
+        redirect('/assets/file/ICCV23_towards_general_ai_in_ad.pdf')
+    }
+    if (
+        pathname.toLowerCase() == '/ICCV23_oral_DriveAdapter.pdf'
+    ) {
+        redirect('/assets/file/ICCV23_oral_DriveAdapter.pdf')
+    }
+
+
 
     return (
         <main>
