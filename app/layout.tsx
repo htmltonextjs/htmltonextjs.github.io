@@ -45,18 +45,10 @@ export const metadata: Metadata = {
 
 // header
 const headers: { title: string; href: string; }[] = [
-    {
-        title: "About Us",
-        href: "/about-us",
-    },
-    {
-        title: "Research",
-        href: "/research",
-    },
-    {
-        title: "Join",
-        href: "/about-us#career",
-    },
+    // {
+    //     title: "About Us",
+    //     href: "/about-us",
+    // },
 ]
 
 
@@ -78,7 +70,7 @@ export default function RootLayout({
                             <Link href="/" className="select-none">
                                 <Image
                                     src="/logo/HKU_MMLAB.png"
-                                    alt="MMLab"
+                                    alt="OpenDriveLab"
                                     width={24}
                                     height={24}
                                     className="group-hover:scale-125 transition delay-100 duration-200"

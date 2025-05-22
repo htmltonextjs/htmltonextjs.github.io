@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'mmlabassets.github.io',
+                hostname: 'opendrivelab.github.io',
                 pathname: '/**',
             },
             {
@@ -17,7 +17,7 @@ const nextConfig: NextConfig = {
             {
                 protocol: 'https',
                 hostname: 'ik.imagekit.io',
-                pathname: '/mmlab/**',
+                pathname: '/opendrivelab/**',
             },
         ],
         dangerouslyAllowSVG: true,

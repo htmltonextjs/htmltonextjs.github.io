@@ -16,9 +16,13 @@ export default function NotFound404() {
 
 
     const pathname = usePathname()
+    if (pathname.toLowerCase() == '/') {
+        redirect('/legacy/index.html')
+    }
     if (pathname.toLowerCase().startsWith('/mpi')) {
         redirect('/legacy/MPI/index.html')
     }
+    
 
 
 
