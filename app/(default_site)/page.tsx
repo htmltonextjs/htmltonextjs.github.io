@@ -13,9 +13,6 @@ import Image from 'next/image'
 
 
 import { FadeIn } from "@/components/animation/fade-in"
-import { RollinggText1 } from "@/components/animation/rolling-text-1"
-import { RollinggText2 } from "@/components/animation/rolling-text-2"
-import { RollinggText3 } from "@/components/animation/rolling-text-3"
 
 
 
@@ -45,16 +42,6 @@ export default function Home() {
                 </div>
             </div>
 
-
-            <FadeIn>
-                <div className="w-full px-6 flex flex-row justify-center pt-32 pb-32 lg:pb-16 bg-gradient-to-br from-morange/60 via-mred/40 to-mblue/60 bg-fixed">
-                    <h1 className='max-w-7xl w-full flex flex-row font-bold text-t0'>
-                        <RollinggText1/>
-                        {/* <RollinggText2/>
-                        <RollinggText3/>*/}
-                    </h1>
-                </div>
-            </FadeIn>
 
 
             <FadeIn> 
