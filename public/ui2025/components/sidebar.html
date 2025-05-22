@@ -1,0 +1,299 @@
+<!-- mobile header -->
+<div id="sidebar_container" class="fixed tablet:hidden w-screen top-0 z-40 flex items-center justify-center gap-x-6 h-16 bg-white px-6">
+    <!-- mobile logo -->
+    <div class="flex h-16 shrink-0 items-center">
+        <a href="/" class="pl-1">
+            <img class="h-6 w-auto" src="/assets/icon/OpenDriveLab.png">
+        </a>
+    </div>
+    <!-- mobile button -->
+    <button onclick="changeSidebar()" type="button" class="ml-auto text-o-blue">
+        <!-- open -->
+        <svg id="sidebar_open" class="size-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#53c2f0" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <!-- close -->
+        <svg id="sidebar_close" class="size-8 hidden" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#53c2f0" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+    </button>
+</div>
+
+
+
+<!-- mobile sidebar -->
+<div id="mobile_sidebar" class="relative tablet:hidden hidden z-30" aria-modal="true">
+    <!--
+        Off-canvas menu backdrop, show/hide based on off-canvas menu state.
+
+        Entering: "transition-opacity ease-linear duration-300"
+        From: "opacity-0"
+        To: "opacity-100"
+        Leaving: "transition-opacity ease-linear duration-300"
+        From: "opacity-100"
+        To: "opacity-0"
+    -->
+    <div class="fixed inset-0 bg-gray-300/80" aria-hidden="true"></div>
+    <div class="fixed inset-0 flex">
+        <!--
+        Off-canvas menu, show/hide based on off-canvas menu state.
+
+        Entering: "transition ease-in-out duration-300 transform"
+            From: "-translate-x-full"
+            To: "translate-x-0"
+        Leaving: "transition ease-in-out duration-300 transform"
+            From: "translate-x-0"
+            To: "-translate-x-full"
+        -->
+        <!-- Static sidebar for desktop -->
+        <div class="relative mr-16 flex w-screen max-w-xs flex-1" id="to_add_sidebar_content_mobile">
+        <!-- Sidebar component, swap this element with another sidebar if you like -->
+        </div>
+    </div>
+</div>
+
+
+
+<!-- static sidebar -->
+<div class="hidden tablet:fixed tablet:inset-y-0 tablet:z-50 tablet:flex tablet:w-72 tablet:flex-col"  id="to_add_sidebar_content_desktop">
+    <!-- Sidebar component, swap this element with another sidebar if you like -->
+</div>
+
+
+
+
+<!-- Embodied AI -->
+<div id="popup_embodied" class="relative z-50 hidden">
+    <div class="fixed inset-0 bg-gray-300/80"></div>
+    <div class="fixed inset-0">
+        <div class="flex h-svh items-center justify-center p-6 laptop:p-72">
+            <div class="relative rounded-3xl bg-white p-6 pt-10 pb-10 laptop:p-10">
+                <div class="absolute right-0 top-0 pr-6 pt-10 laptop:pr-10">
+                    <button onclick="closeEmbodied()">
+                        <svg class="size-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div>
+                    <h3>
+                        Embodied AI
+                    </h3>
+                    <p class="mt-6">
+                        Embodied AI is the integration of artificial intelligence with the physical world, enabling robots to interact with and learn from the real world. We focus on the most critical areas of embodied AI, including humanoid, robot manipulation, and dexterous hand. Our goal is to explore the scaling law for robots, develop general world models, and unveil the power of reinforcement learning to achieve general-purpose embodied agents.
+                    </p>
+                    <div class="mt-6 flex flex-col gap-3">
+                        <a class="p-1 border-l-4 border-o-black pl-6 hover:border-o-blue flex flex-col gap-1 group" href="https://github.com/OpenDriveLab/UniVLA" target="_blank">
+                            <span class="group-hover:text-o-blue">Learning to Act Anywhere with Task-centric Latent Actions</span>
+                            <i class="text-o-gray group-hover:text-o-blue group-hover:opacity-70">RSS 2025</i>
+                        </a>
+                    </div>
+                    <div class="mt-6 flex flex-col gap-3">
+                        <a class="p-1 border-l-4 border-o-black pl-6 hover:border-o-blue flex flex-col gap-1 group" href="/MPI/" target="_blank">
+                            <span class="group-hover:text-o-blue">Learning Manipulation by Predicting Interaction</span>
+                            <i class="text-o-gray group-hover:text-o-blue group-hover:opacity-70">RSS 2024</i>
+                        </a>
+                    </div>
+                    <div class="mt-6 flex flex-col gap-3">
+                        <a class="p-1 border-l-4 border-o-black pl-6 hover:border-o-blue flex flex-col gap-1 group" href="/publications/">
+                            <span class="group-hover:text-o-blue">More ...</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- AD -->
+<div id="popup_e2e" class="relative z-50 hidden">
+    <div class="fixed inset-0 bg-gray-300/80"></div>
+    <div class="fixed inset-0">
+        <div class="flex h-svh items-center justify-center p-6 laptop:p-72">
+            <div class="relative rounded-3xl bg-white p-6 pt-10 pb-10 laptop:p-10 max-h-full overflow-scroll scrollbar-hide">
+                <div class="absolute right-0 top-0 pr-6 pt-10 laptop:pr-10">
+                    <button onclick="closeE2E()">
+                        <svg class="size-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div>
+                    <h3>
+                        End-to-End<br>Autonomous Driving
+                    </h3>
+                    <p class="mt-6">
+                        Autonomous Driving stands at the intersection of intelligence, world modeling, and safety alignment, enabling vehicles to respond to the surroundings effectively for both comfort and safety. We target the crucial areas of autonomous driving, including whole-scene perception systems, critical data generation, and end-to-end decision-making. Our mission is to establish a comprehensive pipeline by leveraging massive real-world driving data and building efficient world representation for safe and generalizable autonomy.
+                    </p>
+                    <div class="mt-6 flex flex-col gap-3">
+                        <a class="p-1 border-l-4 border-o-black pl-6 hover:border-o-blue flex flex-col gap-1 group" href="https://github.com/OpenDriveLab/UniAD" target="_blank">
+                            <span class="group-hover:text-o-blue">Planning-oriented Autonomous Driving</span>
+                            <i class="text-o-gray group-hover:text-o-blue group-hover:opacity-70">CVPR 2023 Best Paper Award</i>
+                        </a>
+                    </div>
+                    <div class="mt-6 flex flex-col gap-3">
+                        <a class="p-1 border-l-4 border-o-black pl-6 hover:border-o-blue flex flex-col gap-1 group" href="https://github.com/OpenDriveLab/End-to-end-Autonomous-Driving" target="_blank">
+                            <span class="group-hover:text-o-blue">End-to-End Autonomous Driving: Challenges and Frontiers</span>
+                            <i class="text-o-gray group-hover:text-o-blue group-hover:opacity-70">TPAMI 2024</i>
+                        </a>
+                    </div>
+                    <div class="mt-6 flex flex-col gap-3">
+                        <a class="p-1 border-l-4 border-o-black pl-6 hover:border-o-blue flex flex-col gap-1 group" href="/Vista/" target="_blank">
+                            <span class="group-hover:text-o-blue">Vista: A Generalizable Driving World Model with High Fidelity and Versatile Controllability</span>
+                            <i class="text-o-gray group-hover:text-o-blue group-hover:opacity-70">NeurIPS 2024</i>
+                        </a>
+                    </div>
+                    <div class="mt-6 flex flex-col gap-3">
+                        <a class="p-1 border-l-4 border-o-black pl-6 hover:border-o-blue flex flex-col gap-1 group" href="/publications/">
+                            <span class="group-hover:text-o-blue">More ...</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- WeChat Public Account -->
+<div id="popup_wechat_public" class="relative z-50 hidden">
+    <div class="fixed inset-0 bg-gray-300/80"></div>
+    <div class="fixed inset-0">
+        <div class="flex h-svh items-center justify-center p-6 laptop:p-72">
+            <div class="relative rounded-3xl bg-white p-6 pt-10 pb-10 laptop:p-10">
+                <div class="absolute right-0 top-0 pr-6 pt-10 laptop:pr-10">
+                    <button onclick="closeWeChatPublic()">
+                        <svg class="size-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col mt-12 justify-items-center w-full justify-center" style="max-width: 768px;">
+                    <div class="flex flex-row justify-items-center w-full justify-center">
+                        <img src="/assets/qrcode_wechat.png" style="max-width: 256px;"/>
+                    </div>
+                    <span class="text-center mt-6">
+                        Subscribe to WeChat Public Account<br>關注微信公眾號
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- WeChat Public Group -->
+<div id="popup_wechat_group" class="relative z-50 hidden">
+    <div class="fixed inset-0 bg-gray-300/80"></div>
+    <div class="fixed inset-0">
+        <div class="flex h-svh items-center justify-center p-6 laptop:p-72">
+            <div class="relative rounded-3xl bg-white p-6 pt-10 pb-10 laptop:p-10">
+                <div class="absolute right-0 top-0 pr-6 pt-10 laptop:pr-10">
+                    <button onclick="closeWeChatGroup()">
+                        <svg class="size-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col mt-12 justify-items-center w-full justify-center" style="max-width: 768px;">
+                    <div class="flex flex-row justify-items-center w-full justify-center">
+                        <img src="/assets/qrcode_wechat_group.png" style="max-width: 256px;"/>
+                    </div>
+                    <span class="text-center mt-6">
+                        Join WeChat Group<br>加入微信羣組
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- popup -->
+<script>
+    function openEmbodied() {
+        document.getElementById("popup_embodied").classList.remove("hidden");
+        document.querySelector('body').classList.add('overflow-hidden');
+    }
+    function closeEmbodied() {
+        document.getElementById("popup_embodied").classList.add("hidden");
+        if (sidebar_state != true) {
+            document.querySelector('body').classList.remove('overflow-hidden');
+        };
+    }
+</script>
+<script>
+    function openE2E() {
+        document.getElementById("popup_e2e").classList.remove("hidden");
+        document.querySelector('body').classList.add('overflow-hidden');
+    }
+    function closeE2E() {
+        document.getElementById("popup_e2e").classList.add("hidden");
+        if (sidebar_state != true) {
+            document.querySelector('body').classList.remove('overflow-hidden');
+        };
+    }
+</script>
+<script>
+    function openWeChatPublic() {
+        document.getElementById("popup_wechat_public").classList.remove("hidden");
+        document.querySelector('body').classList.add('overflow-hidden');
+    }
+    function closeWeChatPublic() {
+        document.getElementById("popup_wechat_public").classList.add("hidden");
+        if (sidebar_state != true) {
+            document.querySelector('body').classList.remove('overflow-hidden');
+        };
+    }
+</script>
+<script>
+    function openWeChatGroup() {
+        document.getElementById("popup_wechat_group").classList.remove("hidden");
+        document.querySelector('body').classList.add('overflow-hidden');
+    }
+    function closeWeChatGroup() {
+        document.getElementById("popup_wechat_group").classList.add("hidden");
+        if (sidebar_state != true) {
+            document.querySelector('body').classList.remove('overflow-hidden');
+        };
+    }
+</script>
+
+
+
+<!-- load sidebar content -->
+<script>
+    $.get('/ui2025/components/sidebar_content_mobile.html', function(result){
+        $("#to_add_sidebar_content_mobile").append(result);
+    })
+    $.get('/ui2025/components/sidebar_content_desktop.html', function(result){
+        $("#to_add_sidebar_content_desktop").append(result);
+    })
+</script>
+
+
+
+<!-- sidebar open/close mobile -->
+<script>
+    var sidebar_state = false;
+    function changeSidebar() {
+        if (sidebar_state === false) {
+            document.getElementById("sidebar_open").classList.add("hidden");
+            document.getElementById("sidebar_close").classList.remove("hidden");
+            document.getElementById("mobile_sidebar").classList.remove("hidden");
+            sidebar_state = true;
+            document.querySelector('body').classList.add('overflow-hidden');
+        } else {
+            document.getElementById("sidebar_open").classList.remove("hidden");
+            document.getElementById("sidebar_close").classList.add("hidden");
+            document.getElementById("mobile_sidebar").classList.add("hidden");
+            sidebar_state = false;
+            document.querySelector('body').classList.remove('overflow-hidden');
+        }
+    }
+</script>

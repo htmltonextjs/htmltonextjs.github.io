@@ -1,0 +1,64 @@
+.timeline > :before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 25%;
+    width: 3px;
+    border-radius: 3px;
+    background-color: rgb(33, 33, 33);
+}
+.timeline > .entries {
+    position: relative;
+}
+
+.timeline > .entries > .entry {
+    margin-bottom: 13px;
+    & .title {
+        &:before {
+            content: "";
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            background-color: rgb(33, 33, 33);
+            border-radius: 100%;
+            right: calc(75% - 8px);
+        }
+    }
+    & h3 {
+        margin: 3px 0;
+    }
+    & span {
+        text-align: right;
+        margin-bottom: 7px;
+    }
+    &:nth-child(2), &:nth-child(8), &:nth-child(9) {
+        margin-right: 80%;
+        text-align: right;
+    }
+    &:nth-child(1), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(10), &:nth-child(11), &:nth-child(12), &:nth-child(13) {
+        margin-left: 30%;
+        text-align: left;
+    }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .timeline > :before {
+        left: 40%;
+    }
+    .timeline > .entries > .entry {
+        & .title {
+            &:before {
+                right: calc(60% - 8px);
+            }
+        }
+        &:nth-child(2), &:nth-child(8), &:nth-child(9) {
+            margin-right: 65%;
+        }
+        &:nth-child(1), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(10), &:nth-child(11), &:nth-child(12), &:nth-child(13) {
+            margin-left: 45%;
+        }
+    }
+}

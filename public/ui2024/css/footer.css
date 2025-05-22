@@ -1,0 +1,113 @@
+.footer {
+    background-color: rgb(33, 33, 33);
+    user-select: none;
+}
+.block_footer {
+    flex-direction: column;
+}
+.footer_align_right {
+    display: flex;
+    justify-content: right;
+}
+
+
+
+.footer a .footer_logo_color {
+    display: none;
+}
+.footer a:hover .footer_logo_white {
+    display: none;
+}
+.footer a:hover .footer_logo_color {
+    display: inherit;
+}
+
+
+
+.footer_first_row a img {
+    height: 39px;
+    margin-bottom: 33px;
+}
+.footer_first_row {
+    display: grid;
+    /* grid-template-columns: 20% 80%; */
+}
+.footer_align_left div {
+    background-color: rgb(233, 233, 233);
+    width: 1px;
+    height: 39px;
+    display: inline-block;
+    margin-bottom: 33px;
+}
+.footer_align_left a, .footer_align_left div {
+    margin-right: 33px;
+}
+@media screen and (max-width: 832px) {
+    .footer_align_left {
+        flex-direction: column;
+    }
+    .footer_align_left div {
+        display: none;
+    }
+}
+
+
+
+.footer_second_row a img {
+    height: 33px;
+}
+.footer_second_row {
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+.footer_second_row .logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 33px);
+    justify-content: space-between;
+    gap: 33px;
+}
+
+
+
+.footer_navigator {
+    border-bottom: 1px solid gray;
+}
+
+
+
+.footer_subscribe {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    & .footer_align_right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        & span {
+            width: 100%;
+            text-align: left;
+            margin-bottom: 7px;
+        }
+        & form {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-bottom: 1px solid gray;
+            & input {
+                color: rgb(233, 233, 233);
+                background-color: transparent;
+                border: 0;
+                padding: 11px 0;
+                width: 80%;
+                outline: none;
+            }
+            & button {
+                background-color: transparent;
+                border: 0;
+                text-align: left;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.citation {
+    background-color: #f6f8fa;
+    margin: 0;
+    margin-top: 7px;
+    padding: 17px;
+    border-radius: 7px;
+    font-size: smaller;
+    font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+    color: #0a3069;
+    & span {
+        display: contents;
+        font-size: inherit;
+    }
+    & .citation_red {
+        color: #cf222e;
+        font-size: inherit;
+    }
+    & .citation_blue {
+        color: #6639ba;
+        font-size: inherit;
+    }
+}
+.citation br {
+    user-select: text;
+}

@@ -1,0 +1,27 @@
+.swiper-pagination {
+    bottom: 80px !important;
+    left: 404px !important;
+    text-align: left !important;
+    width: auto !important;
+    @media screen and (max-width: 1280px) {
+        left: 44px !important;
+        bottom: 56px !important;
+    }
+    /* @media screen and (min-width:1025px) and (max-width: 1280px) {
+        left: 348px !important;
+        bottom: 72px !important;
+    } */
+}
+
+.swiper-pagination-bullet {
+    
+    height: 5px !important;
+    width: 27px !important;
+    border-radius: 33px !important;
+    background-color: rgb(255, 255, 255, .3) !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: rgb(255, 255, 255, .7) !important;
+}

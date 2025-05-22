@@ -1,0 +1,39 @@
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 900;
+    flex-basis: 1;
+    top: 64px;
+    flex-direction: column;
+    font-weight: bold;
+    & .sticky_row {
+        display: flex;
+        & a {
+            width: 25%;
+            text-align: center;
+            padding: 17px;
+        }
+        & a:hover {
+            color: #53c2f0;
+            opacity: 1;
+        }
+        & .image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & img {
+                height: 20px;
+            }
+            & img:hover {
+                opacity: .33;
+            }
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        top: 109px;
+    }
+}
+.sticky_top {
+    background-color: white;
+    box-shadow: 0 0 11px rgb(233, 233, 233);
+}

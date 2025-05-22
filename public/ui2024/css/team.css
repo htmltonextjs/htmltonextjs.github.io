@@ -1,0 +1,71 @@
+.block_left div .person_container div div, .block_left div .person_two_column div .person_container div div {
+    border-bottom: 1px solid rgb(127, 127, 127);
+}
+.block_left div .person_container div .person_container_icon {
+    width: 100%;
+    border: 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 33px);
+    justify-content: space-between;
+    & a {
+        width: 23px;
+        margin-bottom: 7px;
+
+    }
+}
+@media screen and (max-width: 1024px) {
+    .block_left div .person_container div .person_container_icon {
+        grid-template-columns: repeat(auto-fill, 44px);
+        & a {
+            width: 33px;
+            margin-bottom: 11px;
+        }
+    }
+}
+
+
+.teamtable {
+    width: min-content;
+    table-layout: fixed;
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+    }
+}
+.teamtable tbody {
+    vertical-align: top;
+}
+.teamtable tbody tr td {
+    &:nth-child(1) {
+        width: 16px;
+    }
+    &:nth-child(2) {
+        width: 160px;
+    }
+    &:nth-child(3) {
+        width: 160px;
+    }
+    &:nth-child(4) {
+        width: 256px;
+    }
+    @media screen and (max-width: 1024px) {
+        &:nth-child(1) {
+            width: 3%;
+        }
+        &:nth-child(2) {
+            width: 25%;
+        }
+        &:nth-child(3) {
+            width: 30%;
+        }
+        &:nth-child(4) {
+            width: 37%;
+        }
+    }
+}
+
+
+
+.passed {
+    padding: 1px;
+    border: 1px solid rgb(33, 33, 33);
+}
