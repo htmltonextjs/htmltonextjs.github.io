@@ -105,45 +105,97 @@ export default function NotFound404() {
     ) {
         redirect('https://opendrivelab.github.io/elm.github.io/')
     }
-    // challenge
+    // event 2025
     if (
-        pathname.toLowerCase().startsWith('/AD23Challenge') || 
-        pathname.toLowerCase() == '/challenge2023/'
+        pathname.toLowerCase() =='/cvpr2025' ||
+        pathname.toLowerCase() =='/cvpr2025/'
     ) {
-        redirect('/legacy/challenge2023/index.html')
+        redirect('/legacy/cvpr2025/index.html')
     }
     if (
-        pathname.toLowerCase().startsWith('/cvpr2024/challenge') || 
-        pathname.toLowerCase() == '/challenge2024/'
+        pathname.toLowerCase().startsWith('/corl2025/workshop')
     ) {
-        redirect('/legacy/challenge2024/index.html')
+        redirect('/legacy/corl2025/workshop/index.html')
     }
     if (
-        pathname.toLowerCase().startsWith('/challenge2025/temp') || 
-        pathname.toLowerCase() == '/challenge2025/'
+        pathname.toLowerCase().startsWith('/iccv2025/workshop')
+    ) {
+        redirect('/legacy/iccv2025/workshop/index.html')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/cvpr2025/workshop')
+    ) {
+        redirect('/legacy/cvpr2025/workshop/index.html')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/cvpr2025/tutorial')
+    ) {
+        redirect('/legacy/cvpr2025/tutorial/index.html')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/challenge2025')
     ) {
         redirect('/legacy/challenge2025/index.html')
     }
-    // workshop / tutorial
+    // event 2024
     if (
-        pathname.toLowerCase().startsWith('/event/iclr23_ADworkshop') || 
-        pathname.toLowerCase().startsWith('/sr4ad/iclr23') || 
-        pathname.toLowerCase() == '/iclr2023/workshop/'
+        pathname.toLowerCase().startsWith('/cvpr2024/workshop')
     ) {
-        redirect('/legacy/iclr2023/workshop/index.html')
+        redirect('/legacy/cvpr2024/workshop/index.html')
     }
     if (
-        pathname.toLowerCase().startsWith('/event/cvpr23_ADworkshop') ||
-        pathname.toLowerCase() == '/e2ead/cvpr23' ||
-        pathname.toLowerCase() == '/e2ead/cvpr23/' || 
-        pathname.toLowerCase() == '/cvpr2023/workshop/'
+        pathname.toLowerCase().startsWith('/cvpr2024/tutorial')
     ) {
-        redirect('/legacy/cvpr2023/workshop/index.html')
+        redirect('/legacy/cvpr2024/tutorial/index.html')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/cvpr2024/challenge') || 
+        pathname.toLowerCase().startsWith('/challenge2024')
+    ) {
+        redirect('/legacy/challenge2024/index.html')
     }
     if (
         pathname.toLowerCase().startsWith('/valse2024')
     ) {
         redirect('/legacy/valse2024/workshop/index.html')
+    }
+    if (
+        pathname.toLowerCase() =='/cvpr2024' ||
+        pathname.toLowerCase() =='/cvpr2024/'
+    ) {
+        redirect('/legacy/cvpr2024/index.html')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/event2024')
+    ) {
+        redirect('https://starleague.ai/event2024/')
+    }
+    // event 2023
+    if (
+        pathname.toLowerCase().startsWith('/AD23Challenge') || 
+        pathname.toLowerCase().startsWith('/challenge2023')
+    ) {
+        redirect('/legacy/challenge2023/index.html')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/event/iclr23_ADworkshop') || 
+        pathname.toLowerCase().startsWith('/sr4ad/iclr23') || 
+        pathname.toLowerCase().startsWith('/iclr2023/workshop')
+    ) {
+        redirect('/legacy/iclr2023/workshop/index.html')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/event/cvpr23_ADworkshop') ||
+        pathname.toLowerCase().startsWith('/e2ead/cvpr23') ||
+        pathname.toLowerCase().startsWith('/cvpr2023/workshop')
+    ) {
+        redirect('/legacy/cvpr2023/workshop/index.html')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/e2ead/cvpr23_CN') || 
+        pathname.toLowerCase().startsWith('/event2023')
+    ) {
+        redirect('/legacy/event2023/index.html')
     }
     // misc.
     if (
@@ -151,17 +203,7 @@ export default function NotFound404() {
     ) {
         redirect('https://lihongyang.info/')
     }
-    if (
-        pathname.toLowerCase().startsWith('/e2ead/cvpr23_CN') || 
-        pathname.toLowerCase() == '/event2023/'
-    ) {
-        redirect('/legacy/event2023/index.html')
-    }
-    if (
-        pathname.toLowerCase() == '/event2024/'
-    ) {
-        redirect('https://starleague.ai/event2024/')
-    }
+
     if (
         pathname.toLowerCase() == '/e2ead/UniAD_plenary_talk_slides.pdf'
     ) {
