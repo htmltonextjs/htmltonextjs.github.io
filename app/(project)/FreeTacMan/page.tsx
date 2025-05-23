@@ -11,16 +11,16 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+} from "@/components/project/freetacman/ui/card";
+import { Separator } from "@/components/project/freetacman/ui/separator";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/project/freetacman/ui/tabs";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
+} from "@/components/project/freetacman/ui/carousel";
 
 import { PolicyRollouts1 } from "@/components/project/freetacman/chart/policy-rollouts-1";
 import { PolicyRollouts2 } from "@/components/project/freetacman/chart/policy-rollouts-2";
