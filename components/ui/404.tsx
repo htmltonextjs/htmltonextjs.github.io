@@ -101,6 +101,11 @@ export default function NotFound404() {
         redirect('/legacy/RoboDual/index.html')
     }
     if (
+        pathname.toLowerCase().startsWith('/freetacman')
+    ) {
+        redirect('/FreeTacMan')
+    }
+    if (
         pathname.toLowerCase().startsWith('/elm')
     ) {
         redirect('https://opendrivelab.github.io/elm.github.io/')
