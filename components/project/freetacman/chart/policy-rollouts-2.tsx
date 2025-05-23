@@ -18,9 +18,9 @@ import {
   ChartTooltipContent,
 } from "@/components/project/freetacman/ui/chart"
 const chartData = [
-  { browser: "1", visitors: 0, fill: "var(--color-1)" },
-  { browser: "2", visitors: 10, fill: "var(--color-2)" },
-  { browser: "3", visitors: 20, fill: "var(--color-3)" },
+  { browser: "1", visitors: 20, fill: "var(--color-1)" },
+  { browser: "2", visitors: 70, fill: "var(--color-2)" },
+  { browser: "3", visitors: 90, fill: "var(--color-3)" },
 ]
 
 const chartConfig = {
