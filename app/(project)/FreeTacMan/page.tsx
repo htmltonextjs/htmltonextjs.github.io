@@ -95,7 +95,7 @@ export default function Home() {
               playsInline
               className="w-full object-fit max-w-[1024px]"
             >
-              <source src="/freetacman_webpage/landing/FreeTacMan_teaser_gray.mp4" />
+              <source src="https://opendrivelab.github.io/FreeTacMan/landing/FreeTacMan_teaser_gray.mp4" />
             </video>
             <span className="text-xl italic text-gray-400 text-left w-full">
               FreeTacMan is a robot-free, human-centric visuo-tactile data
@@ -236,7 +236,7 @@ export default function Home() {
                     <TabsTrigger
                       value="01"
                       key="01"
-                      className="data-[state=active]:text-[#174BE5] disabled:pointer-events-none flex flex-col py-6 px-3 justify-around rounded-xl text-background font-bold bg-[url('/freetacman_webpage/highlights/01.png')] bg-center bg-cover bg-black bg-opacity-50 bg-blend-overlay w-80 flex-1/3"
+                      className="data-[state=active]:text-[#174BE5] disabled:pointer-events-none flex flex-col py-6 px-3 justify-around rounded-xl text-background font-bold bg-[url('https://opendrivelab.github.io/FreeTacMan/highlights/01.png')] bg-center bg-cover bg-black bg-opacity-50 bg-blend-overlay w-80 flex-1/3"
                     >
                       <h2 className="text-5xl">01</h2>
                       <p className="text-base">
@@ -247,7 +247,7 @@ export default function Home() {
                     <TabsTrigger
                       value="02"
                       key="02"
-                      className="data-[state=active]:text-[#174BE5] disabled:pointer-events-none flex flex-col py-6 px-3 justify-around rounded-xl text-background font-bold bg-[url('/freetacman_webpage/highlights/02.png')] bg-center bg-cover bg-black bg-opacity-50 bg-blend-overlay w-80 flex-1/3"
+                      className="data-[state=active]:text-[#174BE5] disabled:pointer-events-none flex flex-col py-6 px-3 justify-around rounded-xl text-background font-bold bg-[url('https://opendrivelab.github.io/FreeTacMan/highlights/02.png')] bg-center bg-cover bg-black bg-opacity-50 bg-blend-overlay w-80 flex-1/3"
                     >
                       <h2 className="text-5xl">02</h2>
                       <p className="text-base">
@@ -258,7 +258,7 @@ export default function Home() {
                     <TabsTrigger
                       value="03"
                       key="03"
-                      className="data-[state=active]:text-[#174BE5] disabled:pointer-events-none flex flex-col py-6 px-3 justify-around rounded-xl text-background font-bold bg-[url('/freetacman_webpage/highlights/03.png')] bg-center bg-cover bg-black bg-opacity-50 bg-blend-overlay w-80 flex-1/3"
+                      className="data-[state=active]:text-[#174BE5] disabled:pointer-events-none flex flex-col py-6 px-3 justify-around rounded-xl text-background font-bold bg-[url('https://opendrivelab.github.io/FreeTacMan/highlights/03.png')] bg-center bg-cover bg-black bg-opacity-50 bg-blend-overlay w-80 flex-1/3"
                     >
                       <h2 className="text-5xl">03</h2>
                       <p className="text-base">
@@ -272,7 +272,7 @@ export default function Home() {
                     <Card className="border-8 border-[#98AEF3] h-full">
                       <CardContent className="h-full flex justify-center items-center">
                         <video preload="none" autoPlay loop muted playsInline>
-                          <source src="/freetacman_webpage/highlights/highlight01.mp4" />
+                          <source src="https://opendrivelab.github.io/FreeTacMan/highlights/highlight01.mp4" />
                         </video>
                       </CardContent>
                     </Card>
@@ -281,7 +281,7 @@ export default function Home() {
                     <Card className="border-8 border-[#98AEF3] h-full">
                       <CardContent className="h-full flex justify-center items-center">
                         <video preload="none" autoPlay loop muted playsInline>
-                          <source src="/freetacman_webpage/highlights/highlight2_9_16.mp4" />
+                          <source src="https://opendrivelab.github.io/FreeTacMan/highlights/highlight2_9_16.mp4" />
                         </video>
                       </CardContent>
                     </Card>
@@ -290,7 +290,7 @@ export default function Home() {
                     <Card className="border-8 border-[#98AEF3] h-full">
                       <CardContent className="h-full flex justify-center items-center">
                         <video preload="none" autoPlay loop muted playsInline>
-                          <source src="/freetacman_webpage/highlights/20250508-062620.mp4" />
+                          <source src="https://opendrivelab.github.io/FreeTacMan/highlights/20250508-062620.mp4" />
                         </video>
                       </CardContent>
                     </Card>
@@ -356,7 +356,7 @@ export default function Home() {
                       Interactive Modal Viewer
                     </span>
                     <iframe
-                      src="/freetacman_webpage/3d_model/FreeTacMan_Model.html"
+                      src="https://opendrivelab.github.io/FreeTacMan/3d_model/FreeTacMan_Model.html"
                       className="h-[640px] border-4 border-white hover:border-[#174BE5] transition-colors duration-300 rounded-lg"
                     ></iframe>
                   </div>
@@ -370,7 +370,7 @@ export default function Home() {
                                     <div className="flex-1/2 flex flex-col gap-6 items-center justify-between">
                                         <span className="font-bold text-xl">FRANKA</span>
                                         <video preload="none" autoPlay loop muted playsInline className="max-h-[450px]">
-                                            <source src="/3d_model/FreeTacMan_FRANKA.mp4"/>
+                                            <source src="https://github.com/OpenDriveLab/opendrivelab.github.io/blob/master/FreeTacMan/3d_model/FreeTacMan_FRANKA.mp4" />
                                         </video>
                                     </div> */}
                     <div className="flex flex-col gap-20 justify-around">
@@ -383,7 +383,7 @@ export default function Home() {
                         </span>
                       </div>
                       <video preload="none" autoPlay loop muted playsInline>
-                        <source src="/freetacman_webpage/3d_model/piperandfranka.mp4" />
+                        <source src="https://opendrivelab.github.io/FreeTacMan/3d_model/piperandfranka.mp4" />
                       </video>
                     </div>
                   </div>
@@ -460,7 +460,7 @@ export default function Home() {
                       </span>
                       <div className="flex justify-center items-center">
                         <img
-                          src="/freetacman_webpage/task/FragileCupManipulation.png"
+                          src="https://opendrivelab.github.io/FreeTacMan/task/FragileCupManipulation.png"
                           className="h-24 select-none"
                         />
                       </div>
@@ -471,7 +471,7 @@ export default function Home() {
                       </span>
                       <div className="flex justify-center items-center">
                         <img
-                          src="/freetacman_webpage/task/USBPlugging.png"
+                          src="https://opendrivelab.github.io/FreeTacMan/task/USBPlugging.png"
                           className="h-24 select-none"
                         />
                       </div>
@@ -482,7 +482,7 @@ export default function Home() {
                       </span>
                       <div className="flex justify-center items-center">
                         <img
-                          src="/freetacman_webpage/task/TextureClassification.png"
+                          src="https://opendrivelab.github.io/FreeTacMan/task/TextureClassification.png"
                           className="h-24 select-none"
                         />
                       </div>
@@ -493,7 +493,7 @@ export default function Home() {
                       </span>
                       <div className="flex justify-center items-center">
                         <img
-                          src="/freetacman_webpage/task/StampPressing.png"
+                          src="https://opendrivelab.github.io/FreeTacMan/task/StampPressing.png"
                           className="h-24 select-none"
                         />
                       </div>
@@ -506,7 +506,7 @@ export default function Home() {
                       </span>
                       <div className="flex justify-center items-center">
                         <img
-                          src="/freetacman_webpage/task/CalligraphyWriting.png"
+                          src="https://opendrivelab.github.io/FreeTacMan/task/CalligraphyWriting.png"
                           className="h-24 select-none"
                         />
                       </div>
@@ -517,7 +517,7 @@ export default function Home() {
                       </span>
                       <div className="flex justify-center items-center">
                         <img
-                          src="/freetacman_webpage/task/ToothpasteExtrusion.png"
+                          src="https://opendrivelab.github.io/FreeTacMan/task/ToothpasteExtrusion.png"
                           className="h-24 select-none"
                         />
                       </div>
@@ -528,7 +528,7 @@ export default function Home() {
                       </span>
                       <div className="flex justify-center items-center">
                         <img
-                          src="/freetacman_webpage/task/TissueGrasping.png"
+                          src="https://opendrivelab.github.io/FreeTacMan/task/TissueGrasping.png"
                           className="h-24 select-none"
                         />
                       </div>
@@ -539,7 +539,7 @@ export default function Home() {
                       </span>
                       <div className="flex justify-center items-center">
                         <img
-                          src="/freetacman_webpage/task/PotatoChipGrasping.png"
+                          src="https://opendrivelab.github.io/FreeTacMan/task/PotatoChipGrasping.png"
                           className="h-24 select-none"
                         />
                       </div>
@@ -655,7 +655,7 @@ export default function Home() {
                               playsInline
                               className="w-full object-fit"
                             >
-                              <source src="/freetacman_webpage/policy_rollouts/FragileCupManipulation.mov" />
+                              <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/FragileCupManipulation.mov" />
                             </video>
                           </div>
                           <p className="text-center italic text-muted-foreground">
@@ -697,7 +697,7 @@ export default function Home() {
                               playsInline
                               className="w-full object-fit"
                             >
-                              <source src="/freetacman_webpage/policy_rollouts/USBPlugging.mov" />
+                              <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/USBPlugging.mov" />
                             </video>
                           </div>
                           <p className="text-center italic text-muted-foreground">
@@ -729,7 +729,7 @@ export default function Home() {
                               playsInline
                               className="border-6 border-[#FFC53D]/50 rounded-xl object-fit"
                             >
-                              <source src="/freetacman_webpage/policy_rollouts/TextureClassification.mp4" />
+                              <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/TextureClassification.mp4" />
                             </video>
                             <p className="text-center italic text-muted-foreground">
                               The videos are played at normal speed.
@@ -784,7 +784,7 @@ export default function Home() {
                               playsInline
                               className="w-full object-fit"
                             >
-                              <source src="/freetacman_webpage/policy_rollouts/StampPressing.mov" />
+                              <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/StampPressing.mov" />
                             </video>
                           </div>
                           <p className="text-center italic text-muted-foreground">
@@ -816,7 +816,7 @@ export default function Home() {
                               playsInline
                               className=" object-fit"
                             >
-                              <source src="/freetacman_webpage/policy_rollouts/CalligraphyWriting.mp4" />
+                              <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/CalligraphyWriting.mp4" />
                             </video>
                             <p className="text-center italic text-muted-foreground">
                               The videos are played at normal speed.
@@ -928,7 +928,7 @@ export default function Home() {
                             playsInline
                             className="border-6 border-[#174BE5]/50 rounded-xl object-fit"
                           >
-                            <source src="/freetacman_webpage/user_study/FragileCupManipulation.mp4" />
+                            <source src="https://opendrivelab.github.io/FreeTacMan/user_study/FragileCupManipulation.mp4" />
                           </video>
                           <div className="w-full">
                             <UserStudy1 />
@@ -948,7 +948,7 @@ export default function Home() {
                             playsInline
                             className="border-6 border-[#43C9C1]/50 rounded-xl object-fit"
                           >
-                            <source src="/freetacman_webpage/user_study/USBPlugging.mp4" />
+                            <source src="https://opendrivelab.github.io/FreeTacMan/user_study/USBPlugging.mp4" />
                           </video>
                           <div className="w-full">
                             <UserStudy2 />
@@ -968,7 +968,7 @@ export default function Home() {
                             playsInline
                             className="border-6 border-[#FFC53D]/50 rounded-xl object-fit"
                           >
-                            <source src="/freetacman_webpage/user_study/TextureClassification.mov" />
+                            <source src="https://opendrivelab.github.io/FreeTacMan/user_study/TextureClassification.mov" />
                           </video>
                           <div className="w-full">
                             <UserStudy3 />
@@ -993,7 +993,7 @@ export default function Home() {
                             playsInline
                             className="border-6 border-[#FF668C]/50 rounded-xl object-fit"
                           >
-                            <source src="/freetacman_webpage/user_study/StampPressing.mp4" />
+                            <source src="https://opendrivelab.github.io/FreeTacMan/user_study/StampPressing.mp4" />
                           </video>
                           <div className="w-full">
                             <UserStudy4 />
@@ -1013,7 +1013,7 @@ export default function Home() {
                             playsInline
                             className="border-6 border-[#8E73E6]/50 rounded-xl object-fit"
                           >
-                            <source src="/freetacman_webpage/user_study/CalligraphyWriting.mov" />
+                            <source src="https://opendrivelab.github.io/FreeTacMan/user_study/CalligraphyWriting.mov" />
                           </video>
                           <div className="w-full">
                             <UserStudy5 />
@@ -1033,7 +1033,7 @@ export default function Home() {
                             playsInline
                             className="border-6 border-[#d20000]/50 rounded-xl object-fit"
                           >
-                            <source src="/freetacman_webpage/user_study/ToothpasteExtrusion.mp4" />
+                            <source src="https://opendrivelab.github.io/FreeTacMan/user_study/ToothpasteExtrusion.mp4" />
                           </video>
                           <div className="w-full">
                             <UserStudy6 />
@@ -1059,7 +1059,7 @@ export default function Home() {
                             playsInline
                             className="border-6 border-[#7ed233]/50 rounded-xl object-fit"
                           >
-                            <source src="/freetacman_webpage/user_study/TissueGrasping.mp4" />
+                            <source src="https://opendrivelab.github.io/FreeTacMan/user_study/TissueGrasping.mp4" />
                           </video>
                           <div className="w-full">
                             <UserStudy7 />
@@ -1079,7 +1079,7 @@ export default function Home() {
                             playsInline
                             className="border-6 border-[#ff7b00]/50 rounded-xl object-fit"
                           >
-                            <source src="/freetacman_webpage/user_study/PotatoChipGrasping.mp4" />
+                            <source src="https://opendrivelab.github.io/FreeTacMan/user_study/PotatoChipGrasping.mp4" />
                           </video>
                           <div className="w-full">
                             <UserStudy8 />
