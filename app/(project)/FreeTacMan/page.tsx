@@ -4,6 +4,7 @@ export const metadata: Metadata = {
 };
 
 import Link from "next/link";
+import { MobileNav } from "./components/MobileNav";
 import {
   Card,
   CardContent,
@@ -112,8 +113,8 @@ export default function Home() {
       {/* Main Content Section with Table of Contents */}
       <div className="flex w-full">
         {/* Table of Contents */}
-        <div className="w-64 h-screen sticky top-0 p-6 bg-white/90 backdrop-blur-sm shadow-lg">
-          <h3 className="text-2xl font-bold mb-6 text-[#174BE5]">Contents</h3>
+        <div className="w-64 h-screen sticky top-0 p-6 bg-white/90 backdrop-blur-sm shadow-lg hidden md:block">
+          <h3 className="text-2xl font-bold mb-6 mt-12 text-[#174BE5]">Contents</h3>
           <nav className="flex flex-col gap-4">
             <Link
               href="#highlights"
@@ -138,7 +139,7 @@ export default function Home() {
             </Link>
             <Link
               href="#policy-rollouts"
-              className="hover:text-[#174BE5] transition-colors text-lg font-medium group flex items-center"
+              className="hover:text-[#174BE5] transition-colors text-lg font-medium group flex items-center whitespace-nowrap"
             >
               <span className="w-2 h-2 bg-[#174BE5] rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
               Policy Rollouts
@@ -152,6 +153,9 @@ export default function Home() {
             </Link>
           </nav>
         </div>
+
+        {/* Mobile Navigation */}
+        <MobileNav />
 
         {/* Main Content */}
         <div className="flex-1 flex flex-col">
@@ -605,243 +609,241 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="w-full pl-6 pr-6 flex flex-col items-center">
-              <div className="w-full max-w-7xl mt-20">
-                <Tabs
-                  defaultValue={policy_rollouts[0].id}
-                  className="flex flex-col w-full"
-                >
-                  <TabsList className="flex flex-row justify-between gap-6 mb-10">
-                    {policy_rollouts.map((policy_rollout) => (
-                      <TabsTrigger
-                        value={policy_rollout.id}
-                        key={policy_rollout.id}
-                        className={
-                          "shadow-sm rounded-xl w-full  px-1 lg:px-10 py-3 bg-[#eaeaea] font-bold text-background " +
-                          policy_rollout.color
-                        }
-                      >
-                        {policy_rollout.title}
-                      </TabsTrigger>
-                    ))}
-                  </TabsList>
+            <div className="w-full max-w-7xl mt-20">
+              <Tabs
+                defaultValue={policy_rollouts[0].id}
+                className="flex flex-col w-full"
+              >
+                <TabsList className="flex flex-row justify-between gap-6 mb-10">
+                  {policy_rollouts.map((policy_rollout) => (
+                    <TabsTrigger
+                      value={policy_rollout.id}
+                      key={policy_rollout.id}
+                      className={
+                        "shadow-sm rounded-xl w-full  px-1 lg:px-10 py-3 bg-[#eaeaea] font-bold text-background " +
+                        policy_rollout.color
+                      }
+                    >
+                      {policy_rollout.title}
+                    </TabsTrigger>
+                  ))}
+                </TabsList>
 
-                  {/* 1 */}
-                  <TabsContent value="01" key="01" className="w-full">
-                    <Card className="xl:h-[896px] border-[#174BE5]/50 bg-[#eaeaea]/50 border-6 flex flex-col gap-10 justify-around">
-                      <p className="text-xl text-[#174BE5] text-center mt-20 px-10">
-                        The robot grasps a plastic cup and places it{" "}
-                        <b>stably</b> on a tray without causing <b>damage</b>.
-                      </p>
-                      <CardContent className="flex flex-col xl:flex-row gap-6 justify-between h-full items-center">
-                        <div className="flex flex-col flex-3/5 gap-3">
-                          <div className="flex flex-col gap-3">
-                            <div className="flex flex-row w-full justify-around">
-                              <p className=" text-[#174BE5] text-xl text-center flex-1">
-                                ACT<br></br>(Vision-only)
-                              </p>
-                              <p className=" text-[#174BE5] text-xl text-center flex-1">
-                                Ours<br></br>(+ Tactile)
-                              </p>
-                              <p className="text-[#174BE5] text-xl text-center flex-1">
-                                Ours<br></br>(+ Tactile Pretrained)
-                              </p>
-                            </div>
-                            <video
-                              preload="none"
-                              autoPlay
-                              loop
-                              muted
-                              playsInline
-                              className="w-full object-fit"
-                            >
-                              <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/FragileCupManipulation.mov" />
-                            </video>
-                          </div>
-                          <p className="text-center italic text-muted-foreground">
-                            The videos are played at normal speed.
-                          </p>
-                        </div>
-                        <div className="flex-2/5 w-full">
-                          <PolicyRollouts1 />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </TabsContent>
-                  {/* 2 */}
-                  <TabsContent value="02" key="02" className="w-full">
-                    <Card className="xl:h-[896px] border-[#43C9C1]/50 bg-[#eaeaea]/50 border-6 flex flex-col gap-10 justify-around">
-                      <p className="text-xl text-[#43C9C1] text-center mt-20 px-10">
-                        The robot needs to <b>securely</b> plug a pre-grasped
-                        USB into a socket.
-                      </p>
-                      <CardContent className="flex flex-col xl:flex-row gap-6 justify-between h-full items-center">
-                        <div className="flex flex-col flex-3/5 gap-3">
-                          <div className="flex flex-col gap-3">
-                            <div className="flex flex-row w-full justify-around">
-                              <p className=" text-[#43C9C1] text-xl text-center flex-1">
-                                ACT<br></br>(Vision-only)
-                              </p>
-                              <p className=" text-[#43C9C1] text-xl text-center flex-1">
-                                Ours<br></br>(+ Tactile)
-                              </p>
-                              <p className="text-[#43C9C1] text-xl text-center flex-1">
-                                Ours<br></br>(+ Tactile Pretrained)
-                              </p>
-                            </div>
-                            <video
-                              preload="none"
-                              autoPlay
-                              loop
-                              muted
-                              playsInline
-                              className="w-full object-fit"
-                            >
-                              <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/USBPlugging.mov" />
-                            </video>
-                          </div>
-                          <p className="text-center italic text-muted-foreground">
-                            The videos are played at normal speed.
-                          </p>
-                        </div>
-                        <div className="flex-2/5 w-full">
-                          <PolicyRollouts2 />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </TabsContent>
-                  {/* 3 */}
-                  <TabsContent value="03" key="03" className="w-full">
-                    <Card className="xl:h-[896px] border-[#FFC53D]/50 bg-[#eaeaea]/50 border-6 flex flex-col gap-10 justify-around">
-                      <p className="text-xl text-[#FFC53D] text-center mt-20 px-10">
-                        The robot must grasp and identify one of two{" "}
-                        <b>visually indistinguishable</b> cylindrical objects
-                        with distinct textures and sort it into the correct bin.
-                      </p>
-                      <CardContent className="flex flex-col xl:flex-row gap-6 justify-between h-full items-center">
-                        <div className="flex-3/5 flex flex-row gap-3">
-                          <div className="flex flex-col gap-3  w-3/4">
-                            <video
-                              preload="none"
-                              autoPlay
-                              loop
-                              muted
-                              playsInline
-                              className="border-6 border-[#FFC53D]/50 rounded-xl object-fit"
-                            >
-                              <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/TextureClassification.mp4" />
-                            </video>
-                            <p className="text-center italic text-muted-foreground">
-                              The videos are played at normal speed.
-                            </p>
-                          </div>
-
-                          <div className="flex flex-col flex-1/3 justify-around">
-                            <p className=" text-[#FFC53D] text-xl text-center">
+                {/* 1 */}
+                <TabsContent value="01" key="01" className="w-full">
+                  <Card className="xl:h-[896px] border-[#174BE5]/50 bg-[#eaeaea]/50 border-6 flex flex-col gap-10 justify-around">
+                    <p className="text-xl text-[#174BE5] text-center mt-20 px-10">
+                      The robot grasps a plastic cup and places it{" "}
+                      <b>stably</b> on a tray without causing <b>damage</b>.
+                    </p>
+                    <CardContent className="flex flex-col xl:flex-row gap-6 justify-between h-full items-center">
+                      <div className="flex flex-col flex-3/5 gap-3">
+                        <div className="flex flex-col gap-3">
+                          <div className="flex flex-row w-full justify-around">
+                            <p className=" text-[#174BE5] text-xl text-center flex-1">
                               ACT<br></br>(Vision-only)
                             </p>
-
-                            <p className=" text-[#FFC53D] text-xl text-center">
+                            <p className=" text-[#174BE5] text-xl text-center flex-1">
                               Ours<br></br>(+ Tactile)
                             </p>
-                            <p className="text-[#FFC53D] text-xl text-center">
+                            <p className="text-[#174BE5] text-xl text-center flex-1">
                               Ours<br></br>(+ Tactile Pretrained)
                             </p>
                           </div>
+                          <video
+                            preload="none"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="w-full object-fit"
+                          >
+                            <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/FragileCupManipulation.mov" />
+                          </video>
                         </div>
-                        <div className="flex-2/5 w-full">
-                          <PolicyRollouts3 />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </TabsContent>
-                  {/* 4 */}
-                  <TabsContent value="04" key="04" className="w-full">
-                    <Card className="xl:h-[896px] border-[#FF668C]/50 bg-[#eaeaea]/50 border-6 flex flex-col gap-10 justify-around">
-                      <p className="text-xl text-[#FF668C] text-center mt-20 px-10">
-                        The robot presses a stamp onto paper to produce a{" "}
-                        <b>clear</b> imprint.
-                      </p>
-                      <CardContent className="flex flex-col xl:flex-row gap-6 justify-between h-full items-center">
-                        <div className="flex flex-col flex-3/5 gap-3">
-                          <div className="flex flex-col gap-3">
-                            <div className="flex flex-row w-full justify-around">
-                              <p className=" text-[#FF668C] text-xl text-center flex-1">
-                                ACT<br></br>(Vision-only)
-                              </p>
-                              <p className=" text-[#FF668C] text-xl text-center flex-1">
-                                Ours<br></br>(+ Tactile)
-                              </p>
-                              <p className="text-[#FF668C] text-xl text-center flex-1">
-                                Ours<br></br>(+ Tactile Pretrained)
-                              </p>
-                            </div>
-                            <video
-                              preload="none"
-                              autoPlay
-                              loop
-                              muted
-                              playsInline
-                              className="w-full object-fit"
-                            >
-                              <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/StampPressing.mov" />
-                            </video>
+                        <p className="text-center italic text-muted-foreground">
+                          The videos are played at normal speed.
+                        </p>
+                      </div>
+                      <div className="flex-2/5 w-full">
+                        <PolicyRollouts1 />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </TabsContent>
+                {/* 2 */}
+                <TabsContent value="02" key="02" className="w-full">
+                  <Card className="xl:h-[896px] border-[#43C9C1]/50 bg-[#eaeaea]/50 border-6 flex flex-col gap-10 justify-around">
+                    <p className="text-xl text-[#43C9C1] text-center mt-20 px-10">
+                      The robot needs to <b>securely</b> plug a pre-grasped
+                      USB into a socket.
+                    </p>
+                    <CardContent className="flex flex-col xl:flex-row gap-6 justify-between h-full items-center">
+                      <div className="flex flex-col flex-3/5 gap-3">
+                        <div className="flex flex-col gap-3">
+                          <div className="flex flex-row w-full justify-around">
+                            <p className=" text-[#43C9C1] text-xl text-center flex-1">
+                              ACT<br></br>(Vision-only)
+                            </p>
+                            <p className=" text-[#43C9C1] text-xl text-center flex-1">
+                              Ours<br></br>(+ Tactile)
+                            </p>
+                            <p className="text-[#43C9C1] text-xl text-center flex-1">
+                              Ours<br></br>(+ Tactile Pretrained)
+                            </p>
                           </div>
+                          <video
+                            preload="none"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="w-full object-fit"
+                          >
+                            <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/USBPlugging.mov" />
+                          </video>
+                        </div>
+                        <p className="text-center italic text-muted-foreground">
+                          The videos are played at normal speed.
+                        </p>
+                      </div>
+                      <div className="flex-2/5 w-full">
+                        <PolicyRollouts2 />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </TabsContent>
+                {/* 3 */}
+                <TabsContent value="03" key="03" className="w-full">
+                  <Card className="xl:h-[896px] border-[#FFC53D]/50 bg-[#eaeaea]/50 border-6 flex flex-col gap-10 justify-around">
+                    <p className="text-xl text-[#FFC53D] text-center mt-20 px-10">
+                      The robot must grasp and identify one of two{" "}
+                      <b>visually indistinguishable</b> cylindrical objects
+                      with distinct textures and sort it into the correct bin.
+                    </p>
+                    <CardContent className="flex flex-col xl:flex-row gap-6 justify-between h-full items-center">
+                      <div className="flex-3/5 flex flex-row gap-3">
+                        <div className="flex flex-col gap-3  w-3/4">
+                          <video
+                            preload="none"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="border-6 border-[#FFC53D]/50 rounded-xl object-fit"
+                          >
+                            <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/TextureClassification.mp4" />
+                          </video>
                           <p className="text-center italic text-muted-foreground">
                             The videos are played at normal speed.
                           </p>
                         </div>
-                        <div className="flex-2/5 w-full">
-                          <PolicyRollouts4 />
+
+                        <div className="flex flex-col flex-1/3 justify-around">
+                          <p className=" text-[#FFC53D] text-xl text-center">
+                            ACT<br></br>(Vision-only)
+                          </p>
+
+                          <p className=" text-[#FFC53D] text-xl text-center">
+                            Ours<br></br>(+ Tactile)
+                          </p>
+                          <p className="text-[#FFC53D] text-xl text-center">
+                            Ours<br></br>(+ Tactile Pretrained)
+                          </p>
                         </div>
-                      </CardContent>
-                    </Card>
-                  </TabsContent>
-                  {/* 5 */}
-                  <TabsContent value="05" key="05" className="w-full">
-                    <Card className="xl:h-[896px] border-[#8E73E6]/50 bg-[#eaeaea]/50 border-6 flex flex-col gap-10 justify-around">
-                      <p className="text-xl text-[#8E73E6] mt-10 text-center">
-                        The robot traces the <b>recognizable</b> digit "5"
-                        following a guide labeled "202" with a calligraphy
-                        brush.
-                      </p>
-                      <CardContent className="flex flex-col xl:flex-row gap-6 justify-between h-full items-center">
-                        <div className="flex-3/5 flex flex-row gap-3">
-                          <div className="flex flex-col gap-3  w-3/4">
-                            <video
-                              preload="none"
-                              autoPlay
-                              loop
-                              muted
-                              playsInline
-                              className=" object-fit"
-                            >
-                              <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/CalligraphyWriting.mp4" />
-                            </video>
-                            <p className="text-center italic text-muted-foreground">
-                              The videos are played at normal speed.
-                            </p>
-                          </div>
-                          <div className="flex flex-col flex-1/3 justify-around">
-                            <p className=" text-[#8E73E6] text-xl text-center">
+                      </div>
+                      <div className="flex-2/5 w-full">
+                        <PolicyRollouts3 />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </TabsContent>
+                {/* 4 */}
+                <TabsContent value="04" key="04" className="w-full">
+                  <Card className="xl:h-[896px] border-[#FF668C]/50 bg-[#eaeaea]/50 border-6 flex flex-col gap-10 justify-around">
+                    <p className="text-xl text-[#FF668C] text-center mt-20 px-10">
+                      The robot presses a stamp onto paper to produce a{" "}
+                      <b>clear</b> imprint.
+                    </p>
+                    <CardContent className="flex flex-col xl:flex-row gap-6 justify-between h-full items-center">
+                      <div className="flex flex-col flex-3/5 gap-3">
+                        <div className="flex flex-col gap-3">
+                          <div className="flex flex-row w-full justify-around">
+                            <p className=" text-[#FF668C] text-xl text-center flex-1">
                               ACT<br></br>(Vision-only)
                             </p>
-                            <p className=" text-[#8E73E6] text-xl text-center">
+                            <p className=" text-[#FF668C] text-xl text-center flex-1">
                               Ours<br></br>(+ Tactile)
                             </p>
-                            <p className=" text-[#8E73E6] text-xl text-center">
+                            <p className="text-[#FF668C] text-xl text-center flex-1">
                               Ours<br></br>(+ Tactile Pretrained)
                             </p>
                           </div>
+                          <video
+                            preload="none"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="w-full object-fit"
+                          >
+                            <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/StampPressing.mov" />
+                          </video>
                         </div>
-                        <div className="flex-2/5 w-full">
-                          <PolicyRollouts5 />
+                        <p className="text-center italic text-muted-foreground">
+                          The videos are played at normal speed.
+                        </p>
+                      </div>
+                      <div className="flex-2/5 w-full">
+                        <PolicyRollouts4 />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </TabsContent>
+                {/* 5 */}
+                <TabsContent value="05" key="05" className="w-full">
+                  <Card className="xl:h-[896px] border-[#8E73E6]/50 bg-[#eaeaea]/50 border-6 flex flex-col gap-10 justify-around">
+                    <p className="text-xl text-[#8E73E6] mt-10 text-center">
+                      The robot traces the <b>recognizable</b> digit "5"
+                      following a guide labeled "202" with a calligraphy
+                      brush.
+                    </p>
+                    <CardContent className="flex flex-col xl:flex-row gap-6 justify-between h-full items-center">
+                      <div className="flex-3/5 flex flex-row gap-3">
+                        <div className="flex flex-col gap-3  w-3/4">
+                          <video
+                            preload="none"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className=" object-fit"
+                          >
+                            <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/CalligraphyWriting.mp4" />
+                          </video>
+                          <p className="text-center italic text-muted-foreground">
+                            The videos are played at normal speed.
+                          </p>
                         </div>
-                      </CardContent>
-                    </Card>
-                  </TabsContent>
-                </Tabs>
-              </div>
+                        <div className="flex flex-col flex-1/3 justify-around">
+                          <p className=" text-[#8E73E6] text-xl text-center">
+                            ACT<br></br>(Vision-only)
+                          </p>
+                          <p className=" text-[#8E73E6] text-xl text-center">
+                            Ours<br></br>(+ Tactile)
+                          </p>
+                          <p className=" text-[#8E73E6] text-xl text-center">
+                            Ours<br></br>(+ Tactile Pretrained)
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex-2/5 w-full">
+                        <PolicyRollouts5 />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </TabsContent>
+              </Tabs>
             </div>
           </div>
 
