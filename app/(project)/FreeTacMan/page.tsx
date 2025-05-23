@@ -22,19 +22,19 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import { PolicyRollouts1 } from "@/components/chart/policy-rollouts-1";
-import { PolicyRollouts2 } from "@/components/chart/policy-rollouts-2";
-import { PolicyRollouts3 } from "@/components/chart/policy-rollouts-3";
-import { PolicyRollouts4 } from "@/components/chart/policy-rollouts-4";
-import { PolicyRollouts5 } from "@/components/chart/policy-rollouts-5";
-import { UserStudy1 } from "@/components/chart/user-study-1";
-import { UserStudy2 } from "@/components/chart/user-study-2";
-import { UserStudy3 } from "@/components/chart/user-study-3";
-import { UserStudy4 } from "@/components/chart/user-study-4";
-import { UserStudy5 } from "@/components/chart/user-study-5";
-import { UserStudy6 } from "@/components/chart/user-study-6";
-import { UserStudy7 } from "@/components/chart/user-study-7";
-import { UserStudy8 } from "@/components/chart/user-study-8";
+import { PolicyRollouts1 } from "@/components/freetacman/chart/policy-rollouts-1";
+import { PolicyRollouts2 } from "@/components/freetacman/chart/policy-rollouts-2";
+import { PolicyRollouts3 } from "@/components/freetacman/chart/policy-rollouts-3";
+import { PolicyRollouts4 } from "@/components/freetacman/chart/policy-rollouts-4";
+import { PolicyRollouts5 } from "@/components/freetacman/chart/policy-rollouts-5";
+import { UserStudy1 } from "@/components/freetacman/chart/user-study-1";
+import { UserStudy2 } from "@/components/freetacman/chart/user-study-2";
+import { UserStudy3 } from "@/components/freetacman/chart/user-study-3";
+import { UserStudy4 } from "@/components/freetacman/chart/user-study-4";
+import { UserStudy5 } from "@/components/freetacman/chart/user-study-5";
+import { UserStudy6 } from "@/components/freetacman/chart/user-study-6";
+import { UserStudy7 } from "@/components/freetacman/chart/user-study-7";
+import { UserStudy8 } from "@/components/freetacman/chart/user-study-8";
 
 const policy_rollouts: { id: string; title: string; color: string }[] = [
   {
