@@ -906,197 +906,185 @@ export default function Home() {
                   align: "start",
                   loop: true,
                 }}
+                className="w-full"
               >
                 <CarouselContent>
-                  {/* 0 */}
-                  {/* <CarouselItem key={0} className="basis-2/3 xl:basis-1/3 hidden 2xl:block">
-                                    <Card className="border-0 shadow-none">
-                                        <CardContent className="flex aspect-square items-center justify-center p-6"></CardContent>
-                                    </Card>
-                                </CarouselItem> */}
-                  {/* 1 */}
-                  <CarouselItem key={1}>
-                    <div className="grid grid-cols-3 gap-4">
-                      <Card className="border-[#174BE5]/50 bg-[#eaeaea]/50 border-0">
-                        <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
-                          <p className="text-3xl font-bold text-[#174BE5]">
-                            Fragile Cup
-                          </p>
-                          <video
-                            preload="none"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="border-6 border-[#174BE5]/50 rounded-xl object-fit"
-                          >
-                            <source src="https://opendrivelab.github.io/FreeTacMan/user_study/FragileCupManipulation.mp4" />
-                          </video>
-                          <div className="w-full">
-                            <UserStudy1 />
-                          </div>
-                        </CardContent>
-                      </Card>
-                      <Card className="border-[#43C9C1]/50 bg-[#eaeaea]/50 border-0">
-                        <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
-                          <p className="text-3xl font-bold text-[#43C9C1]">
-                            USB Plugging
-                          </p>
-                          <video
-                            preload="none"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="border-6 border-[#43C9C1]/50 rounded-xl object-fit"
-                          >
-                            <source src="https://opendrivelab.github.io/FreeTacMan/user_study/USBPlugging.mp4" />
-                          </video>
-                          <div className="w-full">
-                            <UserStudy2 />
-                          </div>
-                        </CardContent>
-                      </Card>
-                      <Card className="border-[#FFC53D]/50 bg-[#eaeaea]/50 border-0">
-                        <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
-                          <p className="text-3xl font-bold text-[#FFC53D]">
-                            Texture Classification
-                          </p>
-                          <video
-                            preload="none"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="border-6 border-[#FFC53D]/50 rounded-xl object-fit"
-                          >
-                            <source src="https://opendrivelab.github.io/FreeTacMan/user_study/TextureClassification.mov" />
-                          </video>
-                          <div className="w-full">
-                            <UserStudy3 />
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </div>
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Card className="border-[#174BE5]/50 bg-[#eaeaea]/50 border-0">
+                      <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
+                        <p className="text-3xl font-bold text-[#174BE5]">
+                          Fragile Cup
+                        </p>
+                        <video
+                          preload="none"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="border-6 border-[#174BE5]/50 rounded-xl object-fit"
+                        >
+                          <source src="https://opendrivelab.github.io/FreeTacMan/user_study/FragileCupManipulation.mp4" />
+                        </video>
+                        <div className="w-full">
+                          <UserStudy1 />
+                        </div>
+                      </CardContent>
+                    </Card>
                   </CarouselItem>
-                  {/* 2 */}
-                  <CarouselItem key={2}>
-                    <div className="grid grid-cols-3 gap-4">
-                      <Card className=" border-[#FF668C]/50 bg-[#eaeaea]/50 border-0">
-                        <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
-                          <p className="text-3xl font-bold text-[#FF668C]">
-                            Stamp Pressing
-                          </p>
-                          <video
-                            preload="none"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="border-6 border-[#FF668C]/50 rounded-xl object-fit"
-                          >
-                            <source src="https://opendrivelab.github.io/FreeTacMan/user_study/StampPressing.mp4" />
-                          </video>
-                          <div className="w-full">
-                            <UserStudy4 />
-                          </div>
-                        </CardContent>
-                      </Card>
-                      <Card className=" border-[#8E73E6]/50 bg-[#eaeaea]/50 border-0">
-                        <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
-                          <p className="text-3xl font-bold text-[#8E73E6]">
-                            Calligraphy
-                          </p>
-                          <video
-                            preload="none"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="border-6 border-[#8E73E6]/50 rounded-xl object-fit"
-                          >
-                            <source src="https://opendrivelab.github.io/FreeTacMan/user_study/CalligraphyWriting.mov" />
-                          </video>
-                          <div className="w-full">
-                            <UserStudy5 />
-                          </div>
-                        </CardContent>
-                      </Card>
-                      <Card className=" border-[#d20000]/50 bg-[#eaeaea]/50 border-0">
-                        <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
-                          <p className="text-3xl font-bold text-[#d20000]">
-                            Toothpaste Extrusion
-                          </p>
-                          <video
-                            preload="none"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="border-6 border-[#d20000]/50 rounded-xl object-fit"
-                          >
-                            <source src="https://opendrivelab.github.io/FreeTacMan/user_study/ToothpasteExtrusion.mp4" />
-                          </video>
-                          <div className="w-full">
-                            <UserStudy6 />
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </div>
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Card className="border-[#43C9C1]/50 bg-[#eaeaea]/50 border-0">
+                      <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
+                        <p className="text-3xl font-bold text-[#43C9C1]">
+                          USB Plugging
+                        </p>
+                        <video
+                          preload="none"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="border-6 border-[#43C9C1]/50 rounded-xl object-fit"
+                        >
+                          <source src="https://opendrivelab.github.io/FreeTacMan/user_study/USBPlugging.mp4" />
+                        </video>
+                        <div className="w-full">
+                          <UserStudy2 />
+                        </div>
+                      </CardContent>
+                    </Card>
                   </CarouselItem>
-
-                  {/* 3 */}
-                  <CarouselItem key={3}>
-                    <div className="grid grid-cols-3 gap-4">
-                      <Card className=" border-[#7ed233]/50 bg-[#eaeaea]/50 border-0">
-                        <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
-                          <p className="text-3xl font-bold text-[#7ed233]">
-                            Tissue Grasping
-                          </p>
-                          <video
-                            preload="none"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="border-6 border-[#7ed233]/50 rounded-xl object-fit"
-                          >
-                            <source src="https://opendrivelab.github.io/FreeTacMan/user_study/TissueGrasping.mp4" />
-                          </video>
-                          <div className="w-full">
-                            <UserStudy7 />
-                          </div>
-                        </CardContent>
-                      </Card>
-                      <Card className=" border-[#ff7b00]/50 bg-[#eaeaea]/50 border-0">
-                        <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
-                          <p className="text-3xl font-bold text-[#ff7b00]">
-                            Patato Chip Grasping
-                          </p>
-                          <video
-                            preload="none"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="border-6 border-[#ff7b00]/50 rounded-xl object-fit"
-                          >
-                            <source src="https://opendrivelab.github.io/FreeTacMan/user_study/PotatoChipGrasping.mp4" />
-                          </video>
-                          <div className="w-full">
-                            <UserStudy8 />
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </div>
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Card className="border-[#FFC53D]/50 bg-[#eaeaea]/50 border-0">
+                      <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
+                        <p className="text-3xl font-bold text-[#FFC53D]">
+                          Texture Classification
+                        </p>
+                        <video
+                          preload="none"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="border-6 border-[#FFC53D]/50 rounded-xl object-fit"
+                        >
+                          <source src="https://opendrivelab.github.io/FreeTacMan/user_study/TextureClassification.mov" />
+                        </video>
+                        <div className="w-full">
+                          <UserStudy3 />
+                        </div>
+                      </CardContent>
+                    </Card>
                   </CarouselItem>
-
-                  {/* 9 */}
-                  {/* <CarouselItem key={9} className="basis-1/1 xl:basis-1/3">
-                                    <Card className="border-0 shadow-none">
-                                        <CardContent className="flex aspect-square items-center justify-center p-6"></CardContent>
-                                    </Card>
-                                </CarouselItem> */}
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Card className="border-[#FF668C]/50 bg-[#eaeaea]/50 border-0">
+                      <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
+                        <p className="text-3xl font-bold text-[#FF668C]">
+                          Stamp Pressing
+                        </p>
+                        <video
+                          preload="none"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="border-6 border-[#FF668C]/50 rounded-xl object-fit"
+                        >
+                          <source src="https://opendrivelab.github.io/FreeTacMan/user_study/StampPressing.mp4" />
+                        </video>
+                        <div className="w-full">
+                          <UserStudy4 />
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Card className="border-[#8E73E6]/50 bg-[#eaeaea]/50 border-0">
+                      <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
+                        <p className="text-3xl font-bold text-[#8E73E6]">
+                          Calligraphy
+                        </p>
+                        <video
+                          preload="none"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="border-6 border-[#8E73E6]/50 rounded-xl object-fit"
+                        >
+                          <source src="https://opendrivelab.github.io/FreeTacMan/user_study/CalligraphyWriting.mov" />
+                        </video>
+                        <div className="w-full">
+                          <UserStudy5 />
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Card className="border-[#d20000]/50 bg-[#eaeaea]/50 border-0">
+                      <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
+                        <p className="text-3xl font-bold text-[#d20000]">
+                          Toothpaste Extrusion
+                        </p>
+                        <video
+                          preload="none"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="border-6 border-[#d20000]/50 rounded-xl object-fit"
+                        >
+                          <source src="https://opendrivelab.github.io/FreeTacMan/user_study/ToothpasteExtrusion.mp4" />
+                        </video>
+                        <div className="w-full">
+                          <UserStudy6 />
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Card className="border-[#7ed233]/50 bg-[#eaeaea]/50 border-0">
+                      <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
+                        <p className="text-3xl font-bold text-[#7ed233]">
+                          Tissue Grasping
+                        </p>
+                        <video
+                          preload="none"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="border-6 border-[#7ed233]/50 rounded-xl object-fit"
+                        >
+                          <source src="https://opendrivelab.github.io/FreeTacMan/user_study/TissueGrasping.mp4" />
+                        </video>
+                        <div className="w-full">
+                          <UserStudy7 />
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Card className="border-[#ff7b00]/50 bg-[#eaeaea]/50 border-0">
+                      <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
+                        <p className="text-3xl font-bold text-[#ff7b00]">
+                          Patato Chip Grasping
+                        </p>
+                        <video
+                          preload="none"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="border-6 border-[#ff7b00]/50 rounded-xl object-fit"
+                        >
+                          <source src="https://opendrivelab.github.io/FreeTacMan/user_study/PotatoChipGrasping.mp4" />
+                        </video>
+                        <div className="w-full">
+                          <UserStudy8 />
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
                 </CarouselContent>
                 <CarouselPrevious className="border-0" />
                 <CarouselNext className="border-0" />
@@ -1112,10 +1100,6 @@ export default function Home() {
             <Separator className="max-w-7xl mt-32" />
           </div>
         </div>
-      </div>
-
-      <div className="w-full pl-6 pr-6 flex flex-col items-center">
-        <Separator className="max-w-7xl mt-32" />
       </div>
     </main>
   );
