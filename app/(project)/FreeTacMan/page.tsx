@@ -912,6 +912,13 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <div className="w-full flex justify-center mt-10">
+              <img 
+                src="https://opendrivelab.github.io/FreeTacMan/user_study/userstudy_results.png"
+                alt="User Study Results"
+                className="max-w-7xl w-full rounded-xl"
+              />
+            </div>
             <div className="w-full max-w-[1400px] px-20 3xl:px-64 mt-10 p-6 overflow-hidden">
               <Carousel
                 opts={{
@@ -1079,7 +1086,7 @@ export default function Home() {
                     <Card className="border-[#ff7b00]/50 bg-[#eaeaea]/50 border-0">
                       <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
                         <p className="text-xl font-bold text-[#ff7b00]">
-                          Patato Chip Grasping
+                          Chip Grasping
                         </p>
                         <video
                           preload="none"
