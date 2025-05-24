@@ -4,9 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-    --color-mblue: var(--mblue);
-    --color-morange: var(--morange);
-    --color-mred: var(--mred);
+    --color-o-blue: var(--o-blue);
+    --color-o-light-blue: var(--o-light-blue);
+    --color-o-dark-blue: var(--o-dark-blue);
     --color-mgray: var(--mgray);
     --color-background: var(--background);
     --color-foreground: var(--foreground);
@@ -46,9 +46,9 @@
 }
 
 :root {
-    --mblue: #4ec6df;
-    --morange: #f9a61a;
-    --mred: #ee2e69;
+    --o-blue: #00a0e8;
+    --o-light-blue: #53c2f0;
+    --o-dark-blue: #0c318f;
     --mgray: #76777B;
     --radius: 0.625rem;
     --background: oklch(1 0 0);
@@ -85,9 +85,9 @@
 }
 
 .dark {
-    --mblue: #4ec6df;
-    --morange: #f9a61a;
-    --mred: #ee2e69;
+    --o-blue: #00a0e8;
+    --o-light-blue: #53c2f0;
+    --o-dark-blue: #0c318f;
     --mgray: #76777B;
     --background: #0d0d0d;
     --foreground: oklch(0.985 0 0);
@@ -142,10 +142,10 @@
 
 /* background color */
 .bg-gradient-landing {
-    @apply bg-gradient-to-br from-morange via-mred to-mblue;
+    @apply bg-gradient-to-br from-o-dark-blue via-o-light-blue to-o-blue;
 }
 .bg-gradient-loading {
-    @apply bg-gradient-to-br from-mblue via-morange to-mred;
+    @apply bg-gradient-to-br from-o-dark-blue via-o-light-blue to-o-blue;
 }
 
 
@@ -189,7 +189,7 @@
 .member_bio {
     & a{
         border-bottom: 1px solid transparent;
-        @apply text-mred transition delay-100 duration-200;
+        @apply text-o-dark-blue transition delay-100 duration-200;
     }
     & a:hover {
         @apply border-b-inherit;

@@ -59,8 +59,7 @@ export default function NotFound404() {
     }
     // project
     if (
-        pathname.toLowerCase().startsWith('/blog/agibot-world-colosseo') || 
-        pathname.toLowerCase() == '/blog/agibot-world/'
+        pathname.toLowerCase().startsWith('/blog/agibot-world')
     ) {
         redirect('/legacy/blog/agibot-world/index.html')
     }
@@ -118,12 +117,12 @@ export default function NotFound404() {
         redirect('/legacy/cvpr2025/index.html')
     }
     if (
-        pathname.toLowerCase().startsWith('/corl2025/workshop')
+        pathname.toLowerCase().startsWith('/corl2025')
     ) {
         redirect('/legacy/corl2025/workshop/index.html')
     }
     if (
-        pathname.toLowerCase().startsWith('/iccv2025/workshop')
+        pathname.toLowerCase().startsWith('/iccv2025')
     ) {
         redirect('/legacy/iccv2025/workshop/index.html')
     }
@@ -185,14 +184,14 @@ export default function NotFound404() {
     if (
         pathname.toLowerCase().startsWith('/event/iclr23_ADworkshop') || 
         pathname.toLowerCase().startsWith('/sr4ad/iclr23') || 
-        pathname.toLowerCase().startsWith('/iclr2023/workshop')
+        pathname.toLowerCase().startsWith('/iclr2023')
     ) {
         redirect('/legacy/iclr2023/workshop/index.html')
     }
     if (
         pathname.toLowerCase().startsWith('/event/cvpr23_ADworkshop') ||
         pathname.toLowerCase().startsWith('/e2ead/cvpr23') ||
-        pathname.toLowerCase().startsWith('/cvpr2023/workshop')
+        pathname.toLowerCase().startsWith('/cvpr2023')
     ) {
         redirect('/legacy/cvpr2023/workshop/index.html')
     }
