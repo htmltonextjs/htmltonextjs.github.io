@@ -357,11 +357,11 @@ export default function Home() {
                       Interactive Modal Viewer
                     </span>
                     <p className="text-base text-center max-w-7xl">
-                      Dive into our interactive 3D model viewer and explore the most popular native 3D formats with ease.
+                    Dive into our 💡<b className="text-[#004cee]">interactive</b> 3D model viewer and explore the most popular native 3D formats with ease.
                       <br />
-                      Try out the move command to inspect internal structures.
+                      Try out the 🖱️<b className="text-[#004cee]">move</b> command to inspect internal structures.
                       <br />
-                      It's more than just viewing — it's a hands-on exploration. Start discovering now!
+                      It's more than just viewing — it's a hands-on exploration. Start 💫<b className="text-[#004cee]">discovering</b> now!
                     </p>
                     <iframe
                       src="https://opendrivelab.github.io/FreeTacMan/3d_model/FreeTacMan_Model_simple.html"
@@ -604,11 +604,11 @@ export default function Home() {
               <div className="w-full flex flex-col items-center mt-20">
                 <div className="w-full max-w-5xl flex flex-row justify-between">
                   <p className="text-base text-left w-full">
-                  We integrate tactile feedback to assess its impact on policy performance, 
+                  We integrate <b className="text-[#004cee]">tactile feedback</b> to assess its impact on policy performance, 
                   observing a substantial improvement that highlights its dynamic value in contact-rich tasks. 
-                  Temporal-aware pretraining further enhances performance by aligning visual and tactile embeddings 
+                  <b className="text-[#004cee]">Temporal-aware pretraining</b> further enhances performance by aligning visual and tactile embeddings 
                   while capturing temporal dynamics. Across five evaluated tasks, imitation policies trained with our visuo-tactile data 
-                  achieve an average success rate that is 50% higher than vision-only counterparts.
+                  achieve an average success rate that is <b className="text-[#004cee]">50% higher</b> than vision-only counterparts.
                   </p>
                 </div>
                 <div className="w-full flex justify-center mt-10">
@@ -906,8 +906,8 @@ export default function Home() {
                   <p className="text-base text-left w-full">
                   We evaluate the usability of FreeTacMan through a user study involving 12 human participants 
                   with varying levels of experience, each collecting demonstrations across 8 tasks. 
-                  Compared to previous setups, FreeTacMan consistently achieves the highest completion rates and efficiency, 
-                  and is perceived as the most user-friendly and reliable data collection system.
+                  Compared to previous setups, FreeTacMan consistently achieves the <b className="text-[#004cee]">highest completion rates and efficiency</b>, 
+                  and is perceived as <b className="text-[#004cee]">the most user-friendly and reliable</b> data collection system.
                   </p>
                 </div>
               </div>
